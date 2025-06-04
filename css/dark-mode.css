@@ -1,0 +1,45 @@
+:root {
+  --primary-color: #4dabf7;
+  --secondary-color: #adb5bd;
+  --text-color: #e9ecef;
+  --bg-color: #212529;
+  --card-bg: #343a40;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+header {
+  background-color: var(--card-bg);
+}
+
+.skill-bar {
+  background-color: #495057;
+}
+
+.timeline-content {
+  background-color: var(--card-bg);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::after {
+  border-color: transparent transparent transparent var(--card-bg);
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+  border-color: transparent var(--card-bg) transparent transparent;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #495057;
+  border-color: #495057;
+  color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Proyectos | Mi Portafolio</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/dark-mode.css" id="dark-mode-style" disabled>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <a href="index.html" class="logo">MiPortafolio</a>
+        <div class="nav-links">
+          <a href="index.html#about">Sobre mí</a>
+          <a href="index.html#skills">Habilidades</a>
+          <a href="index.html#education">Educación</a>
+          <a href="index.html#projects">Proyectos</a>
+          <a href="index.html#contact">Contacto</a>
+          <button id="dark-mode-toggle" class="dark-mode-btn">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <button class="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Todos mis <span class="highlight">Proyectos</span></h2>
+        <div class="projects-grid" id="all-projects">
+          <!-- Los proyectos se cargarán dinámicamente con JS -->
+        </div>
+        <div class="text-center">
+          <a href="index.html" class="btn">Volver al Inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Mi Portafolio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/dark-mode.js"></script>
+  <script>
+    // Cargar todos los proyectos
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('data/portfolio.json')
+        .then(response => response.json())
+        .then(data => {
+          const allProjectsGrid = document.getElementById('all-projects');
+          
+          // Mostrar proyectos destacados primero
+          data.featuredProjects.forEach(project => {
+            const projectCard = createProjectCard(project);
+            allProjectsGrid.appendChild(projectCard);
+          });
+          
+          // Aquí podrías cargar más proyectos si los tuvieras en el JSON
+          // Ejemplo:
+          /*
+          data.otherProjects.forEach(project => {
+            const projectCard = createProjectCard(project);
+            allProjectsGrid.appendChild(projectCard);
+          });
+          */
+          
+          // Actualizar año en el footer
+          document.getElementById('year').textContent = new Date().getFullYear();
+        })
+        .catch(error => console.error('Error al cargar los proyectos:', error));
+      
+      // Función para crear tarjetas de proyecto
+      function createProjectCard(project) {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card';
+        projectCard.innerHTML = `
+          <div class="project-image">
+            <img src="${project.image}" alt="${project.title}">
+          </div>
+          <div class="project-info">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <div class="project-tech">
+              ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+            </div>
+            <div class="project-links">
+              <a href="${project.link}" target="_blank">Ver Proyecto</a>
+              <a href="${project.link}" target="_blank">Código Fuente</a>
+            </div>
+          </div>
+        `;
+        return projectCard;
+      }
+      
+      // Menú hamburguesa
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
