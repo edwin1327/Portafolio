@@ -83,6 +83,13 @@ document.addEventListener('DOMContentLoaded', function() {
         "technologies": ["HTML", "CSS"],
         "image": "images/project2.jpg",
         "link": "https://edwin1327.github.io/proyectoLandingPage/"
+      },
+      {
+        "title": "Modelo página responsive",
+        "description": "Modelo de página responsive para restaurante",
+        "technologies": ["HTML", "CSS"],
+        "image": "images/project3.jpg",
+        "link": "https://edwin1327.github.io/paginaResponsive/src/public/"
       }
     ]
   };
