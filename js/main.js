@@ -90,6 +90,13 @@ document.addEventListener('DOMContentLoaded', function() {
         "technologies": ["HTML", "CSS"],
         "image": "images/project3.jpg",
         "link": "https://edwin1327.github.io/paginaResponsive/src/public/"
+      },
+      {
+        "title": "Landing Page Gamer",
+        "description": "Modelo de página Landing Page con Html ",
+        "technologies": ["HTML", "CSS"],
+        "image": "images/project4.jpg",
+        "link": "https://edwin1327.github.io/landingPageGamer/Public/"
       }
     ]
   };
