@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "description": "Página de Login con conexión en PHP a Base datos mySQL ",
         "technologies": ["HTML", "CSS", "PHP", "MYSQL"],
         "image": "images/project5.jpg",
-        "link": "https://edwin1327.github.io/catalogo-productos/index.html",
-        "github": "https://github.com/edwin1327/catalogo-productos.git"
+        "link": "https://edwin1327.github.io/TemplateLogin/assets/app/public/",
+        "github": "https://github.com/edwin1327/TemplateLogin.git"
       },
       {
         "title": "Landing Page",
