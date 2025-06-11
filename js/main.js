@@ -75,28 +75,40 @@ document.addEventListener('DOMContentLoaded', function() {
         "description": "Aplicación de Listado de Productos para la venta",
         "technologies": ["HTML", "CSS", "JS"],
         "image": "images/project1.jpg",
-        "link": "https://edwin1327.github.io/catalogo-productos/index.html"
+        "link": "https://edwin1327.github.io/catalogo-productos/index.html",
+        "github": "https://github.com/edwin1327/catalogo-productos.git"
+      },
+      {
+        "title": "Página Login con conexión PHP",
+        "description": "Página de Login con conexión en PHP a Base datos mySQL ",
+        "technologies": ["HTML", "CSS", "PHP", "MYSQL"],
+        "image": "images/project5.jpg",
+        "link": "https://edwin1327.github.io/catalogo-productos/index.html",
+        "github": "https://github.com/edwin1327/catalogo-productos.git"
       },
       {
         "title": "Landing Page",
         "description": "Página Landing Page con inicio y registro de sesión",
         "technologies": ["HTML", "CSS"],
         "image": "images/project2.jpg",
-        "link": "https://edwin1327.github.io/proyectoLandingPage/"
+        "link": "https://edwin1327.github.io/proyectoLandingPage/",
+        "github": "https://github.com/edwin1327/proyectoLandingPage.git"
       },
       {
         "title": "Modelo página responsive",
         "description": "Modelo de página responsive para restaurante",
         "technologies": ["HTML", "CSS"],
         "image": "images/project3.jpg",
-        "link": "https://edwin1327.github.io/paginaResponsive/src/public/"
+        "link": "https://edwin1327.github.io/paginaResponsive/src/public/",
+        "github": "https://github.com/edwin1327/paginaResponsive.git"
       },
       {
         "title": "Landing Page Gamer",
         "description": "Modelo de página Landing Page con Html ",
         "technologies": ["HTML", "CSS"],
         "image": "images/project4.jpg",
-        "link": "https://edwin1327.github.io/landingPageGamer/Public/"
+        "link": "https://edwin1327.github.io/landingPageGamer/Public/",
+        "github": "https://github.com/edwin1327/landingPageGamer.git"
       }
     ]
   };
@@ -242,7 +254,7 @@ function loadProjects(projects) {
         </div>
         <div class="project-links">
           <a href="${project.link}" target="_blank">Ver Proyecto</a>
-          <a href="${project.link}" target="_blank">Código Fuente</a>
+          <a href="${project.github}" target="_blank">Código Fuente</a>
         </div>
       </div>
     `;
